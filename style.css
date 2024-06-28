@@ -12,7 +12,9 @@ body {
 }
 
 #container {
-    width: 360px;
+    box-sizing: content-box;
+    width: 64vmin;
+    border: 1px lightslategrey solid;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -20,7 +22,7 @@ body {
 
 .square {
     flex: none;
-    width: 90px;
-    height: 90px;
+    width: 16vmin;
+    height: 16vmin;
     border: 1px lightslategrey solid;
 }
