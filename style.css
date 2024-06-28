@@ -14,7 +14,7 @@ body {
 #container {
     box-sizing: content-box;
     width: 64vmin;
-    border: 1px lightslategrey solid;
+    border: 0.5px lightslategrey solid;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -24,5 +24,5 @@ body {
     flex: none;
     width: 16vmin;
     height: 16vmin;
-    border: 1px lightslategrey solid;
+    border: 0.5px lightslategrey solid;
 }
