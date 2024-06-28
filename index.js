@@ -10,16 +10,6 @@ container.addEventListener(
     true
 )
 
-container.addEventListener(
-    "mouseleave",
-    (e) => {
-        if (e.target.classList.contains("square")) {
-            e.target.style.backgroundColor = "white";
-        }
-    },
-    true
-)
-
 initScreen(4);
 
 const resetButton = document.querySelector("#reset");
@@ -27,7 +17,6 @@ resetButton.addEventListener(
     "click",
     () => {
         const input = prompt("Input the number of squares per side (1-100)");
-        console.log(input);
         if (input === null) {
             return;
         }
