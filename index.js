@@ -4,11 +4,12 @@ container.addEventListener(
     "mouseenter",
     (e) => {
         if (e.target.classList.contains("square")) {
-            e.target.style.backgroundColor = "pink";
+            e.target.style.backgroundColor = getRandomColorHsl();
         }
     },
     true
 )
+
 container.addEventListener(
     "mouseleave",
     (e) => {
@@ -51,4 +52,9 @@ function initScreen(n){
         square.style.height = squareSize;
         container.appendChild(square);
     }
+}
+
+function getRandomColorHsl(s=100, l=50){
+    const h = Math.floor(Math.random() * 36) * 10;
+    return `hsl(${h} ${s}% ${l}%)`;
 }
