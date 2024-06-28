@@ -4,17 +4,24 @@ const container = document.querySelector("#container");
 for (let i = 0; i < 16; i++) {
     const square = document.createElement("div");
     square.classList.add("square");
-    square.addEventListener(
+    container.appendChild(square);
+
+    container.addEventListener(
         "mouseenter",
         (e) => {
-            e.target.style.backgroundColor = "pink";
-        }
+            if (e.target.classList.contains("square")) {
+                e.target.style.backgroundColor = "pink";
+            }
+        },
+        true
     )
-    square.addEventListener(
+    container.addEventListener(
         "mouseleave",
         (e) => {
-            e.target.style.backgroundColor = "white";
-        }
+            if (e.target.classList.contains("square")) {
+                e.target.style.backgroundColor = "white";
+            }
+        },
+        true
     )
-    container.appendChild(square);
 }
