@@ -25,8 +25,17 @@ const resetButton = document.querySelector("#reset");
 resetButton.addEventListener(
     "click",
     () => {
-        const screenSize = prompt("Input the number of squares per side (<=100)");
-        initScreen(screenSize);
+        const input = prompt("Input the number of squares per side (1-100)");
+        console.log(input);
+        if (input === null) {
+            return;
+        }
+        const screenSize = parseInt(input);
+        if (Number.isInteger(screenSize) && screenSize > 0 && screenSize <= 100) {
+            initScreen(screenSize);
+        } else {
+            alert("The input should be an integer between 1 to 100.");
+        }
     }
 );
 
