@@ -13,10 +13,13 @@ body {
     align-items: center;
 }
 
+#container, .square {
+    border: 0.5px #eee solid;
+}
+
 #container {
     box-sizing: content-box;
     width: 80vmin;
-    border: 0.5px lightslategrey solid;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -26,5 +29,4 @@ body {
     flex: none;
     width: 20vmin;
     height: 20vmin;
-    border: 0.5px lightslategrey solid;
 }
