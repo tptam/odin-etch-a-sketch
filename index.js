@@ -21,6 +21,15 @@ container.addEventListener(
 
 initScreen(4);
 
+const resetButton = document.querySelector("#reset");
+resetButton.addEventListener(
+    "click",
+    () => {
+        const screenSize = prompt("Input the number of squares per side (<=100)");
+        initScreen(screenSize);
+    }
+);
+
 function initScreen(n){
     const container = document.querySelector("#container");
     container.style.width = "80vmin";
