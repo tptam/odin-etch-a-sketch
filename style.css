@@ -13,7 +13,7 @@ body {
 
 #container {
     box-sizing: content-box;
-    width: 64vmin;
+    width: 80vmin;
     border: 0.5px lightslategrey solid;
     display: flex;
     flex-wrap: wrap;
@@ -22,7 +22,7 @@ body {
 
 .square {
     flex: none;
-    width: 16vmin;
-    height: 16vmin;
+    width: 20vmin;
+    height: 20vmin;
     border: 0.5px lightslategrey solid;
 }

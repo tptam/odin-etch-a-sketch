@@ -1,11 +1,5 @@
 const container = document.querySelector("#container");
 
-for (let i = 0; i < 16; i++) {
-    const square = document.createElement("div");
-    square.classList.add("square");
-    container.appendChild(square);
-}
-
 container.addEventListener(
     "mouseenter",
     (e) => {
@@ -24,6 +18,8 @@ container.addEventListener(
     },
     true
 )
+
+initScreen(4);
 
 function initScreen(n){
     const container = document.querySelector("#container");
