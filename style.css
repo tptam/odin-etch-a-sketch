@@ -26,6 +26,7 @@ body {
 }
 
 #reset {
-    font-size: 24px;
-    padding: 10px 20px;    
+    font-size: x-large;
+    width: 15vmin;
+    height: 5vmin;    
 }
