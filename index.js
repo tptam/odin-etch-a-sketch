@@ -10,7 +10,7 @@ container.addEventListener(
     true
 )
 
-initScreen(4);
+initScreen(16);
 
 const resetButton = document.querySelector("#reset");
 resetButton.addEventListener(
