@@ -4,7 +4,8 @@ container.addEventListener(
     "mouseenter",
     (e) => {
         if (e.target.classList.contains("square")) {
-            e.target.style.backgroundColor = getRandomColorHsl();
+            // e.target.style.backgroundColor = getRandomColorHsl();
+            setDarkerBackground(e.target);
         }
     },
     true
@@ -39,6 +40,7 @@ function initScreen(n){
         square.classList.add("square");
         square.style.width = squareSize;
         square.style.height = squareSize;
+        square.setAttribute("data-lightness", 100);
         container.appendChild(square);
     }
 }
@@ -46,4 +48,13 @@ function initScreen(n){
 function getRandomColorHsl(s=100, l=50){
     const h = Math.floor(Math.random() * 36) * 10;
     return `hsl(${h} ${s}% ${l}%)`;
+}
+
+function setDarkerBackground(element, step=10) {
+    const currentLightness = parseInt(element.getAttribute(
+        "data-lightness"
+    ));
+    const nextLightness = Math.max(0, currentLightness - step);
+    element.setAttribute("data-lightness", nextLightness);
+    element.style.backgroundColor = `hsl(0 0% ${nextLightness}%)`;    
 }
