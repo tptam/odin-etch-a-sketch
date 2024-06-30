@@ -25,53 +25,7 @@ body {
     justify-content: center;
 }
 
-.square {
-    flex: none;
-    width: 20vmin;
-    height: 20vmin;
+#reset {
+    font-size: 24px;
+    padding: 10px 20px;    
 }
-
-.black0 {
-    background-color: hsl(0 0% 100%);
-}
-
-.black10 {
-    background-color: hsl(0 0% 90%);
-}
-
-.black20 {
-    background-color: hsl(0 0% 80%);
-}
-
-.black30 {
-    background-color: hsl(0 0% 70%);
-}
-
-.black40 {
-    background-color: hsl(0 0% 60%);
-}
-
-.black50 {
-    background-color: hsl(0 0% 50%);
-}
-
-.black60 {
-    background-color: hsl(0 0% 40%);
-}
-
-.black70 {
-    background-color: hsl(0 0% 30%);
-}
-
-.black80 {
-    background-color: hsl(0 0% 20%);
-}
-
-.black90 {
-    background-color: hsl(0 0% 10%);
-}
-
-.black100 {
-    background-color: hsl(0 0% 0%);
-}
-

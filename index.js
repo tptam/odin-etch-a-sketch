@@ -29,6 +29,7 @@ resetButton.addEventListener(
     }
 );
 
+
 function initScreen(n){
     const container = document.querySelector("#container");
     container.style.width = "80vmin";
@@ -44,9 +45,15 @@ function initScreen(n){
     }
 }
 
+
 function getRandomColorHsl(s=100, l=50){
     const h = Math.floor(Math.random() * 36) * 10;
     return `hsl(${h} ${s}% ${l}%)`;
+}
+
+
+function setRandomBackground(element){
+    element.style.backgroundColor = getRandomColorHsl();
 }
 
 function setDarkerBackground(element, step=10) {
@@ -58,6 +65,3 @@ function setDarkerBackground(element, step=10) {
     element.style.backgroundColor = `hsl(0 0% ${nextLightness}%)`;    
 }
 
-function setRandomBackground(element){
-    element.style.backgroundColor = getRandomColorHsl();
-}
