@@ -4,7 +4,6 @@ container.addEventListener(
     "mouseenter",
     (e) => {
         if (e.target.classList.contains("square")) {
-            // e.target.style.backgroundColor = getRandomColorHsl();
             setDarkerBackground(e.target);
         }
     },
@@ -57,4 +56,8 @@ function setDarkerBackground(element, step=10) {
     const nextLightness = Math.max(0, currentLightness - step);
     element.setAttribute("data-lightness", nextLightness);
     element.style.backgroundColor = `hsl(0 0% ${nextLightness}%)`;    
+}
+
+function setRandomBackground(element){
+    element.style.backgroundColor = getRandomColorHsl();
 }
